@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SalesManiac — Real Tools. Real Performance.</title>
+  <meta name="description" content="SalesManiac delivers practical tools for salespeople, team leaders, and managers — cheatsheets and practical resources." />
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#121821; --muted:#9fb0c3; --text:#eaf1f8;
+      --accent:#62a8ff; --accent-2:#6ee7b7; --lux:#c6a972;
+      --radius:18px; --shadow:0 12px 36px rgba(0,0,0,.28)
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color:var(--text);
+      background: radial-gradient(1200px 800px at 12% -10%, #111827 0%, #0b0f14 60%) fixed;}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1120px; margin:0 auto; padding:28px 18px 80px; text-align:center}
+
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px}
+    .brand{display:flex; align-items:center; gap:14px}
+    .logo-wrap{display:flex; align-items:center; gap:12px}
+    .logo{width:160px; height:auto; display:block}
+    .brand-txt{display:flex; flex-direction:column}
+    .motto{color:var(--lux); font-weight:700; letter-spacing:.3px}
+    nav{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+    .tab{padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.12); color:var(--muted)}
+    .tab.active{border-color:var(--lux); color:var(--text); box-shadow:0 0 0 1px rgba(198,169,114,.25) inset}
+    .lang{display:flex; gap:6px; margin-left:8px}
+    .chip{padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.16); color:var(--muted); cursor:pointer; user-select:none}
+    .chip.active{border-color:var(--lux); color:var(--text)}
+
+    .hero{margin-top:8px; padding:22px; border-radius:var(--radius); background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.06); box-shadow:var(--shadow)}
+    .hero h2{margin:0 0 10px; font-size:1.5rem}
+    .hero p{margin:6px 0; color:var(--muted)}
+    .list{margin:10px 0; padding-left:18px; display:inline-block; text-align:left}
+
+    .panel{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; text-align:left}
+
+    .toolbar{margin:16px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:center}
+    input[type="text"], select{background:#0f151e; color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:10px 12px}
+    .btn{appearance:none; border:none; cursor:pointer; background:linear-gradient(135deg, var(--accent), #3b82f6); color:white; font-weight:700; letter-spacing:.2px; padding:10px 16px; border-radius:12px; box-shadow:var(--shadow)}
+    .btn-ghost{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,.16)}
+    .btn-lux{background:linear-gradient(135deg, var(--lux), #9a7f4a); color:#0c0f14}
+
+    footer{margin-top:32px; color:var(--muted); font-size:.9rem; text-align:center}
+    .footer-contact{margin-top:28px; margin-bottom:10px}
+    .footer-contact h4{margin:0 0 6px; font-size:1rem; color:var(--text)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap">
+          <img class="logo" src="assets/logo.png" alt="SalesManiac Logo" />
+        </div>
+        <div class="brand-txt">
+          <span class="motto">Train Yourself</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="tab" id="nav-home">Home</a>
+        <a href="#products" class="tab" id="nav-products">Products</a>
+        <a href="#about" class="tab" id="nav-about">About</a>
+        <a href="mailto:TheSalesManiac@protonmail.com" class="tab" id="nav-contact">Contact</a>
+        <div class="lang">
+          <span class="chip active" data-lang="en">EN</span>
+          <span class="chip" data-lang="ro">RO</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO EN -->
+    <section id="home" class="hero" data-page="en">
+      <h2>Real Tools. Real Performance.</h2>
+      <p>SalesManiac delivers practical tools for salespeople, team leaders, and managers who want more than theory.</p>
+      <p>From handling objections and call scripts, to coaching frameworks and team management systems, everything is designed for real-world application — including full offline functionality, where it matters most.</p>
+      <ul class="list">
+        <li>Sharper, more persuasive calls</li>
+        <li>Coaching that scales with your team</li>
+        <li>Simplified management with actionable tools</li>
+      </ul>
+      <p>Stay in control of your sales process — from first contact to final result.</p>
+      <div class="toolbar">
+        <a href="#products" class="btn btn-lux">View products</a>
+        <a href="mailto:TheSalesManiac@protonmail.com" class="btn btn-ghost">Contact</a>
+      </div>
+    </section>
+
+    <!-- HERO RO -->
+    <section class="hero" data-page="ro" hidden>
+      <h2>Unelte reale. Performanță reală.</h2>
+      <p>SalesManiac oferă instrumente practice pentru oameni de vânzări, team leaderi și manageri care vor rezultate, nu teorie.</p>
+      <p>De la gestionarea obiecțiilor și scripturi de apel, la framework‑uri de coaching și sisteme de management, totul este gândit pentru aplicare în teren — inclusiv funcționalitate completă offline, acolo unde contează.</p>
+      <ul class="list">
+        <li>Apeluri mai clare și mai convingătoare</li>
+        <li>Coaching care scalează cu echipa</li>
+        <li>Management simplificat cu unelte acționabile</li>
+      </ul>
+      <p>Rămâi în controlul procesului de vânzare — de la primul contact până la rezultat.</p>
+      <div class="toolbar">
+        <a href="#products" class="btn btn-lux">Vezi produsele</a>
+        <a href="mailto:TheSalesManiac@protonmail.com" class="btn btn-ghost">Contact</a>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="panel">
+      <div class="toolbar">
+        <input id="search" type="text" placeholder="Search product…" data-i18n-placeholder-en="Search product…" data-i18n-placeholder-ro="Caută produs…" />
+        <select id="cat">
+          <option value="" data-i18n-en="All categories" data-i18n-ro="Toate categoriile">All categories</option>
+          <option value="cheatsheet">Cheatsheet</option>
+          <option value="bundle">Bundle</option>
+        </select>
+      </div>
+      <div id="prodGrid" class="grid"></div>
+    </section>
+
+    <!-- ABOUT EN (extended) -->
+    <section id="about" class="panel" data-page="en">
+      <h3>About SalesManiac</h3>
+      <p>We’re obsessed with one thing: helping sales pros perform better with tools that actually get used.
+         Every asset starts from real calls, real objections, and real team coaching—not from theory.</p>
+
+      <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+        <div>
+          <h4 style="margin:.2rem 0">Principles</h4>
+          <ul>
+            <li><strong>Clarity over hype:</strong> simple, repeatable, battle-tested.</li>
+            <li><strong>Offline-friendly:</strong> usable in low-connectivity environments.</li>
+            <li><strong>Measurable:</strong> oriented to observable conversations & outcomes.</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin:.2rem 0">Who we serve</h4>
+          <ul>
+            <li>SDRs & AEs who want sharper calls</li>
+            <li>Team Leads who need scalable coaching</li>
+            <li>Managers who want clean operating systems</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin:.2rem 0">What’s next</h4>
+          <ul>
+            <li>Objection Helper (web/app) — <em>coming soon</em></li>
+            <li>Coaching trackers & scorecards</li>
+            <li>Call flow libraries with examples</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin:14px 0 6px">Mini FAQ</h4>
+      <details><summary>How are products delivered?</summary>
+        Via Gumroad (instant access after purchase). Apps via external stores (e.g., Google Play).
+      </details>
+      <details><summary>Do you offer refunds?</summary>
+        Digital items are delivered instantly and generally non-returnable (see <a href="legal.html" target="_blank">Legal</a>). Platform policies apply for apps.
+      </details>
+      <details><summary>Can I use them for my team?</summary>
+        Yes—personal license by default; team licensing available on request.
+      </details>
+
+      <div class="toolbar">
+        <a href="#products" class="btn btn-lux">Browse products</a>
+        <a href="mailto:TheSalesManiac@protonmail.com" class="btn btn-ghost">Ask a question</a>
+      </div>
+    </section>
+
+    <!-- ABOUT RO (extended) -->
+    <section class="panel" data-page="ro" hidden>
+      <h3>Despre SalesManiac</h3>
+      <p>Suntem obsedați de un singur lucru: să ajutăm oamenii de vânzări să performeze mai bine cu unelte care chiar sunt folosite.
+         Fiecare resursă pornește din apeluri reale, obiecții reale și coaching de echipă—nu din teorie.</p>
+
+      <div style="display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+        <div>
+          <h4 style="margin:.2rem 0">Principii</h4>
+          <ul>
+            <li><strong>Claritate, nu hype:</strong> simplu, repetabil, testat în teren.</li>
+            <li><strong>Offline-friendly:</strong> utilizabile când conexiunea e slabă.</li>
+            <li><strong>Măsurabile:</strong> orientate pe conversații & rezultate vizibile.</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin:.2rem 0">Cui ne adresăm</h4>
+          <ul>
+            <li>SDR & AE care vor apeluri mai clare</li>
+            <li>Team Lead‑i care au nevoie de coaching scalabil</li>
+            <li>Manageri care doresc sisteme operaționale curate</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin:.2rem 0">Ce urmează</h4>
+          <ul>
+            <li>Objection Helper (web/app) — <em>în curând</em></li>
+            <li>Trackere & scorecard‑uri de coaching</li>
+            <li>Biblioteci de call flow cu exemple</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin:14px 0 6px">Mini FAQ</h4>
+      <details><summary>Cum sunt livrate produsele?</summary>
+        Prin Gumroad (acces instant după achiziție). Aplicațiile prin magazine externe (ex.: Google Play).
+      </details>
+      <details><summary>Există retur?</summary>
+        Produsele digitale sunt livrate instant și, în general, nu pot fi returnate (vezi <a href="legal.html" target="_blank">Legal</a>). Pentru aplicații se aplică politicile platformelor.
+      </details>
+      <details><summary>Pot să le folosesc pentru echipa mea?</summary>
+        Da — licență personală implicit; licențe pentru echipe la cerere.
+      </details>
+
+      <div class="toolbar">
+        <a href="#products" class="btn btn-lux">Vezi produsele</a>
+        <a href="mailto:TheSalesManiac@protonmail.com" class="btn btn-ghost">Pune o întrebare</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-contact">
+        <h4 id="contact-title">Contact</h4>
+        <div><a href="mailto:TheSalesManiac@protonmail.com">TheSalesManiac@protonmail.com</a></div>
+      </div>
+      <p id="footer-line">© <span id="year"></span> SalesManiac • <a href="legal.html" target="_blank" rel="noopener">Legal</a> • All rights reserved</p>
+    </footer>
+  </div>
+  <script>
+    const PRODUCTS = [
+      { id:'cs-001', type:'cheatsheet', title:'Coaching with NLP for Sales Managers', price:9, currency:'EUR', desc:'A practical NLP-based coaching framework tailored for sales managers.', buy_url:'https://cos7ach3.gumroad.com/l/CoachingwithNLPforSalesManagers' },
+      { id:'cs-002', type:'cheatsheet', title:'Call Center General Objection Matrix', price:9, currency:'EUR', desc:'10 Techniques to Turn Objections into Opportunities.', buy_url:'https://cos7ach3.gumroad.com/l/CallCenterGeneralObjectionMatrix' },
+      { id:'cs-003', type:'cheatsheet', title:'Sales Closing Techniques', price:9, currency:'EUR', desc:'Proven closing techniques you can deploy today.', buy_url:'https://cos7ach3.gumroad.com/l/SalesClosingTechniques' }
+    ];
+
+    const prodGrid = document.getElementById('prodGrid');
+    function fmtPrice(p,c){return new Intl.NumberFormat('en-US',{style:'currency',currency:c}).format(p)}
+    function renderProducts(){
+      prodGrid.innerHTML='';
+      for(const p of PRODUCTS){
+        const el=document.createElement('div'); el.className='card span-4';
+        el.innerHTML=`<h3>${p.title}</h3><p class='muted'>${p.desc}</p><p class='price'>${fmtPrice(p.price,p.currency)}</p><div class='toolbar'><a href='${p.buy_url}' class='btn btn-lux' target='_blank' rel='noopener'>Buy</a></div>`;
+        prodGrid.appendChild(el);
+      }
+    }
+    renderProducts();
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Language switch
+    const chips = document.querySelectorAll('.chip[data-lang]');
+    const pages = document.querySelectorAll('[data-page]');
+    let lang = 'en';
+    function setNav(){
+      document.getElementById('nav-home').textContent = (lang==='en'?'Home':'Acasă');
+      document.getElementById('nav-products').textContent = (lang==='en'?'Products':'Produse');
+      document.getElementById('nav-about').textContent = (lang==='en'?'About':'Despre');
+      document.getElementById('nav-contact').textContent = (lang==='en'?'Contact':'Contact');
+      // footer
+      document.getElementById('contact-title').textContent = (lang==='en'?'Contact':'Contact');
+      const footerLine = document.getElementById('footer-line');
+      const yearTxt = new Date().getFullYear();
+      footerLine.innerHTML = (lang==='en'
+        ? `© <span id="year">${yearTxt}</span> SalesManiac • <a href="legal.html" target="_blank" rel="noopener">Legal</a> • All rights reserved`
+        : `© <span id="year">${yearTxt}</span> SalesManiac • <a href="legal.html" target="_blank" rel="noopener">Legal</a> • Toate drepturile rezervate`);
+      // inputs
+      const search = document.getElementById('search');
+      search.setAttribute('placeholder', lang==='en' ? search.dataset.i18nPlaceholderEn : search.dataset.i18nPlaceholderRo);
+      // select option text
+      document.querySelectorAll('#cat option').forEach(opt=>{
+        const en = opt.getAttribute('data-i18n-en');
+        const ro = opt.getAttribute('data-i18n-ro');
+        if(en && ro){ opt.textContent = (lang==='en'?en:ro); }
+      });
+    }
+    function applyLang(){
+      pages.forEach(p=>p.hidden = (p.getAttribute('data-page')!==lang));
+      document.documentElement.lang = lang;
+      chips.forEach(c=>c.classList.toggle('active', c.getAttribute('data-lang')===lang));
+      setNav();
+    }
+    document.addEventListener('click', (e)=>{
+      const sw = e.target.closest('.chip[data-lang]');
+      if(sw){ lang = sw.getAttribute('data-lang'); applyLang(); }
+    });
+    applyLang();
+  </script>
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+</body>
+</html>
