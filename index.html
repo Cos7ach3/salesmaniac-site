@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SalesManiac — Real Tools. Real Performance.</title>
   <meta name="description" content="SalesManiac delivers practical tools for salespeople, team leaders, and managers — cheatsheets and practical resources." />
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SalesManiac — Real Tools. Real Performance." />
+  <meta property="og:description" content="Practical sales tools that actually get used. Cheatsheets, frameworks and real-world resources." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SalesManiac — Real Tools. Real Performance." />
+  <meta name="twitter:description" content="Practical sales tools that actually get used. Cheatsheets, frameworks and real-world resources." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+
   <style>
     :root{
       --bg:#0b0f14; --card:#121821; --muted:#9fb0c3; --text:#eaf1f8;
@@ -229,9 +244,10 @@
   </div>
   <script>
     const PRODUCTS = [
-      { id:'cs-001', type:'cheatsheet', title:'Coaching with NLP for Sales Managers', price:9, currency:'EUR', desc:'A practical NLP-based coaching framework tailored for sales managers.', buy_url:'https://cos7ach3.gumroad.com/l/CoachingwithNLPforSalesManagers' },
-      { id:'cs-002', type:'cheatsheet', title:'Call Center General Objection Matrix', price:9, currency:'EUR', desc:'10 Techniques to Turn Objections into Opportunities.', buy_url:'https://cos7ach3.gumroad.com/l/CallCenterGeneralObjectionMatrix' },
-      { id:'cs-003', type:'cheatsheet', title:'Sales Closing Techniques', price:9, currency:'EUR', desc:'Proven closing techniques you can deploy today.', buy_url:'https://cos7ach3.gumroad.com/l/SalesClosingTechniques' }
+      { id:'cs-001', type:'cheatsheet', title:'Coaching with NLP for Sales Managers', price:6, currency:'USD', desc:'A practical NLP-based coaching framework tailored for sales managers.', buy_url:'https://thesalesmaniac.gumroad.com/l/CoachingwithNLPforSalesManagers' },
+      { id:'cs-002', type:'cheatsheet', title:'Call Center General Objection Matrix', price:6, currency:'USD', desc:'Techniques to Turn Objections into Opportunities.', buy_url:'https://thesalesmaniac.gumroad.com/l/CallCenterGeneralObjectionMatrix' },
+      { id:'cs-003', type:'cheatsheet', title:'Sales Closing Techniques', price:6, currency:'USD', desc:'Proven closing techniques you can deploy today.', buy_url:'https://thesalesmaniac.gumroad.com/l/SalesClosingTechniques' },
+      { id:'cs-004', type:'cheatsheet', title:'The Intelligent Feedback Cheatsheet', price:6, currency:'USD', desc:'A structured guide to giving and receiving feedback that drives real improvement.', buy_url:'https://thesalesmaniac.gumroad.com/l/TheIntelligentFeedbackCheatsheet' }
     ];
 
     const prodGrid = document.getElementById('prodGrid');
@@ -247,7 +263,6 @@
     renderProducts();
     document.getElementById('year').textContent=new Date().getFullYear();
 
-    // Language switch
     const chips = document.querySelectorAll('.chip[data-lang]');
     const pages = document.querySelectorAll('[data-page]');
     let lang = 'en';
@@ -256,17 +271,14 @@
       document.getElementById('nav-products').textContent = (lang==='en'?'Products':'Produse');
       document.getElementById('nav-about').textContent = (lang==='en'?'About':'Despre');
       document.getElementById('nav-contact').textContent = (lang==='en'?'Contact':'Contact');
-      // footer
       document.getElementById('contact-title').textContent = (lang==='en'?'Contact':'Contact');
       const footerLine = document.getElementById('footer-line');
       const yearTxt = new Date().getFullYear();
       footerLine.innerHTML = (lang==='en'
         ? `© <span id="year">${yearTxt}</span> SalesManiac • <a href="legal.html" target="_blank" rel="noopener">Legal</a> • All rights reserved`
         : `© <span id="year">${yearTxt}</span> SalesManiac • <a href="legal.html" target="_blank" rel="noopener">Legal</a> • Toate drepturile rezervate`);
-      // inputs
       const search = document.getElementById('search');
       search.setAttribute('placeholder', lang==='en' ? search.dataset.i18nPlaceholderEn : search.dataset.i18nPlaceholderRo);
-      // select option text
       document.querySelectorAll('#cat option').forEach(opt=>{
         const en = opt.getAttribute('data-i18n-en');
         const ro = opt.getAttribute('data-i18n-ro');
